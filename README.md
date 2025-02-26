@@ -1,40 +1,89 @@
-<<<<<<< HEAD
-# pokimon-explorer
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+### Overview
+
+Pokemon Explorer is a responsive and visually appealing web app built using Next.js. It fetches data from the PokeAPI and allows users to explore Pokémon with a search feature and detailed Pokémon pages.
+
+### Features
+
+#### Homepage
+
+- Displays a list of Pokémon fetched from the PokeAPI.
+
+- Implements a search bar to filter Pokémon by name.
+
+- Styled using TailwindCSS for a modern and responsive UI.
+
+#### Detail Page
+
+- Clicking on a Pokémon navigates to a new page displaying detailed information.
+
+- Shows image, abilities, type, stats, and moves of the selected Pokémon.
+
+
+#### Performance Optimization (Optional Implementations)
+
+- Uses Static Site Generation (SSG) for optimized performance.
+
+- Implements Server-Side Rendering (SSR) where necessary for dynamic data.
+
+#### Tech Stack
+
+- Next.js 
+
+- TypeScript
+
+- TailwindCSS (For responsive and clean styling)
+
+
+### Installation & Setup
+
+#### Prerequisites
+
+- Ensure you have Node.js and npm/yarn installed on your system.
+
+- Steps to Run the Project
+
+- Clone the Repository:
+    ```bash
+    git clone https://github.com/sarathos584/pokimon-explorer.git
+    ```
+    ```bash
+    cd pokemon-explorer
+    ```
+
+
+
+- Install Dependencies:
+    ```bash
+    npm install  # or yarn install
+    ```
+    ```bash
+    npm run dev  # or yarn dev
+    ```
+
+- Run the Development Server:
+
+    Open in Browser:
+    Visit http://localhost:3000 to explore Pokémon.
+
+#### Folder Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├─public # Store static assets
+├─src
+├── apps  
+│   ├── layout.tsx        # Layout page
+│   ├── page.tsx        # Homepage listing Pokémon
+│   ├── [id]
+│   │   ├── page.tsx     # Dynamic Pokémon detail page
+├── components           # Reusable UI components
+├── helpers              # Reusable util functions
+├── types               # Custom types
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### API Reference
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+PokeAPI: https://pokeapi.co/
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> c882e73 (Initial commit from Create Next App)
