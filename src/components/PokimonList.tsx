@@ -29,6 +29,13 @@ const PokimonList = ({ kantoPokimon }: { kantoPokimon: any }) => {
         </div>
         <div className="list px-10 py-[20vh] flex flex-wrap gap-5 justify-center items-center max-w-[80vw] min-h-[95vh]  mx-auto overflow-hidden scroll overflow-y-scroll">
         {
+          data?.length === 0 && (
+            <div>
+              <p>No item found!</p>
+            </div>
+          )
+        }
+        {
         data?.map((item: any, idx: any)=> (
           <div className="border border-solid min-w-[200px] min-h-[200px] rounded-md p-5 bg-white"  key={idx}>
             <Link href={`/${idx + 1}`} >

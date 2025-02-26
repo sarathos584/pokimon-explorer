@@ -9,12 +9,16 @@ export const  metadata = {
 
 export default async function Home() {
 
-
-  const kantoPokimon = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151").then(response => response.json())
-    
+  let error: boolean = false
+  const kantoPokimon = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151").then(response => response.json()).catch(()=> {
+    error = true
+  })
+  
   return (
     <section id="pokimon-list" className="">
-      <PokimonList kantoPokimon={kantoPokimon}/>
+      {
+        error ? <p>Something Went Wrong</p> : <PokimonList kantoPokimon={kantoPokimon}/>
+      }
     </section>
   );
 }

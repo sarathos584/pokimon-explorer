@@ -13,10 +13,9 @@ export const metadata = {
 const PokimonView = async ({ params }: { params: { id: string }}) => {
     
         const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.id}`).then(response => response.json())
-        console.log(data.sprites, 'sprites')
-        const { abilityArray, type, statsArray, moves, images } = _processViewApiData(data)
-        console.log(_processViewApiData(data))
 
+        const { abilityArray, type, statsArray, moves, images } = _processViewApiData(data)
+        
         const renderImages = ()=> {
             if (!images) return null
             return Object.values(images)
@@ -65,7 +64,7 @@ const PokimonView = async ({ params }: { params: { id: string }}) => {
   return (
     <div className='min-h-[100vh] pt-[20vh] max-w-[60%] mx-auto text-center flex flex-col justify-center'>
         <h2 className='text-2xl capitalize font-bold'>{data.name}</h2>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap justify-center mt-3">
         {
             renderImages()
         }
