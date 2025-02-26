@@ -4,9 +4,9 @@
  * @returns - processed data object for view page
  */
 
-import { PokimonView } from "@/types/types"
+import { PokimonViewResponse } from "@/types/types"
 
-export const _processViewApiData = (data: any): PokimonView => {
+export const _processViewApiData = (data: any): PokimonViewResponse => {
 
     const abilityArray: string[] = []
     const statsArray: string[] = []

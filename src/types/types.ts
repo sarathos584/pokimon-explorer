@@ -1,5 +1,5 @@
 
-export type PokimonView = {
+export type PokimonViewResponse = {
     abilityArray: string[]
     type: string
     statsArray: string[]
