@@ -1,15 +1,20 @@
 import Link from 'next/link';
 import React from 'react'
 
+
+export const metadata = {
+    title: 'Pokimon',
+    description: "Pokimon view"
+}
+
+
 const PokimonView = async ({ params }: { params: { id: string }}) => {
-    
     
     let data
     let image; 
     if (params?.id) {
         data = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.id}`).then(response => response.json())
         image = data.sprites.front_default
-        console.log(data,  'view page')
     }
 
   return (

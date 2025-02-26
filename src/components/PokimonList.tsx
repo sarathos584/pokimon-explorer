@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 
 
-const PokimonList = ({ kantoPokimon }: { kantoPokimon: any}) => {
+const PokimonList = ({ kantoPokimon }: { kantoPokimon: any }) => {
 
   const [data, setData] = useState<undefined | any[]>()
   const [search, setSearch] = useState('')
