@@ -10,6 +10,20 @@
 }
 
 body {
+  scroll-behavior: smooth;
+}
+.key {
+  font-size: larger;
+  font-weight: 500;
+}
+.badge {
+  background: rgb(168 85 247);
+  color: white;
+  padding: .5em .7em ;
+  text-wrap: nowrap;
+  margin: .5em;
+  border-radius: 12px;
+  width: fit-content;
 }
 
 @layer utilities {

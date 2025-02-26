@@ -10,8 +10,8 @@ export default async function Home() {
     .then(response => response.json())
     
   return (
-    <main>
+    <section id="pokimon-list" className="">
       <PokimonList kantoPokimon={kantoPokimon}/>
-    </main>
+    </section>
   );
 }

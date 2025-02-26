@@ -26,9 +26,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-h-full`}
       >
+        <header className="min-h-[70px]  bg-purple-100 fixed w-full z-10 flex justify-center items-center">
+            <h1 className="font-extrabold text-3xl">The Pkimon Explorer</h1>
+        </header>
+        <main className=" bg-purple-100">
         {children}
+        </main>
+        <footer className="min-h-[50px] bg-slate-500 text-center flex items-center justify-center">
+            Thank you all
+        </footer>
       </body>
     </html>
   );
